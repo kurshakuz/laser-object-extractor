@@ -1,0 +1,13 @@
+<launch>
+
+    <node pkg="rosbag" type="play" name="player"
+        args="$(find movel_assignment)/bags/path_test.bag" />
+
+    <node pkg="movel_assignment" type="path_reduction.py" name="path_reduction" output="screen">
+        <param name="desired_path_num" type="int" value="100" />
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz"
+        args="-d $(find movel_assignment)/rviz/vslam.rviz" />
+
+</launch>
