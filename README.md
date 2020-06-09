@@ -1,10 +1,10 @@
-# Movel.AI Technical Assignment
+# Laser Object Extraction in Python
 
-This is a ROS package, where I have implemented given assignment tasks.
+This is a ROS package, where I have implemented Laser Object Extraction using Python and ROS.
 
 To run files, simply add this package to your catkin workspace and run ```$ catkin_make```
 
-## Part A - Algorithmic Test
+<!-- ## 
 
 ### Background
 The aim of this task was to create an algorithm that can reduce the total number of path points for robot navigation while preserving the main shape to follow. For this task, the main assumption is that the approximate total number of path points is already given and is equal to ~992. As the input of the path is not given as a list of points and rather sent one by one, it was decided to update path points on-line and publish them on other topic.
@@ -12,7 +12,7 @@ The aim of this task was to create an algorithm that can reduce the total number
 ### Running
 To run the example, simply run
 ```bash
-roslaunch movel_assignment path_reduction_launch.launch
+roslaunch laser_object_extractor path_reduction_launch.launch
 ```
 
 The script will run the rosbag file, execution node, and will open RViZ window. To change the desired number of points, simply change it in ```<param name="desired_path_num" type="int" value="100" />``` line.
@@ -20,13 +20,13 @@ The script will run the rosbag file, execution node, and will open RViZ window. 
 ![](/assets/path.png)
 
 ### Solution video
-Online path data reduction - Assignment, Part A:
-https://youtu.be/lBLjt2U8U7I
+Online path data reduction
+https://youtu.be/lBLjt2U8U7I -->
 
-## Part B - Rack Detection Test
+## Rack Legs Extraction in warehouse - usage example
 
 ### Background
-The aim of this task was to find and locate the legs of the rack which are installed in the warehouse. The task is to locate and track rack legs in the warehouse, where the robot is moving. The data is given in the recorded rosbag and consists only of LaserScan and Image sensor readings. 
+The aim of this example is to find and locate the legs of the rack which are installed in the warehouse. The task is to locate and track rack legs in the warehouse, where the robot is moving. The data is given in the recorded rosbag and consists only of LaserScan and Image sensor readings. 
 
 ![](/assets/input.png)
 
@@ -44,7 +44,7 @@ Please add a corresponding rosbag to the /rviz folder or change path to it.
 
 To run the example, simply run
 ```bash
-roslaunch movel_assignment rack_legs_extraction_launch.launch
+roslaunch laser_object_extractor rack_legs_extraction_launch.launch
 ```
 
 The script will run the rosbag file, execution node, and will open RViZ window.
@@ -62,5 +62,5 @@ Finally, it can be seen that at some time instances not all rack legs are identi
  -->
 
 ### Solution video 
-Rack Leg extraction from LaserScan - Assignment, Part B: 
+Rack Leg extraction from LaserScan
 https://youtu.be/YnFh-PRTJPY

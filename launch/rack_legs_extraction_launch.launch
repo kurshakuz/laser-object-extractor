@@ -1,11 +1,11 @@
 <launch>
 
     <node pkg="rosbag" type="play" name="player"
-        args="$(find movel_assignment)/bags/2019-02-27-19-35-19.bag" />
+        args="$(find laser_object_extractor)/bags/2019-02-27-19-35-19.bag" />
 
-    <node pkg="movel_assignment" type="rack_legs_extraction.py" name="rack_legs_extraction" output="screen" />
+    <node pkg="laser_object_extractor" type="rack_legs_extraction.py" name="rack_legs_extraction" output="screen" />
 
     <node pkg="rviz" type="rviz" name="rviz"
-        args="-d $(find movel_assignment)/rviz/rack_legs.rviz" />
+        args="-d $(find laser_object_extractor)/rviz/rack_legs.rviz" />
 
 </launch>
